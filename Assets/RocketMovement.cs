@@ -57,4 +57,11 @@ public class RocketMovement : MonoBehaviour
         }
         rb.freezeRotation = false;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
