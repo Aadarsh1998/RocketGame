@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RocketMovement : MonoBehaviour
 {
@@ -61,7 +62,21 @@ public class RocketMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(gameObject);
+            Invoke("SameLevel", 0.5f);
         }
+        if(collision.gameObject.tag == "Finish")
+        {
+            Invoke("NextLevel",0.5f);
+        }
+    }
+    void SameLevel()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene(0);
+    }
+    private void NextLevel()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene(1);
     }
 }
