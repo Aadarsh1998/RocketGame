@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b77badc4994b7a4c886621b5bbd91d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 20
+  thrust: 5
   rotateThrust: 20
 --- !u!1 &262852609
 GameObject:

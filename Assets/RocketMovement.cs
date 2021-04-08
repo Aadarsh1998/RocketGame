@@ -68,15 +68,19 @@ public class RocketMovement : MonoBehaviour
         {
             Invoke("NextLevel",0.5f);
         }
+        if(collision.gameObject.tag == "FinishTwo")
+        {
+            SceneManager.LoadScene(3);
+        }
     }
     void SameLevel()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     private void NextLevel()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }
